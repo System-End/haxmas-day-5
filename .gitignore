@@ -1,0 +1,5 @@
+venv/
+gifts.db
+__pycache__/
+.env
+*.pyc

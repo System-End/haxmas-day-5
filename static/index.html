@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gift Tracker</title>
+        <script src="./main.js" defer></script>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div id="loginScreen" class="content">
+            <h1>Gift Tracker</h1>
+            <img src="https://haxmas.hackclub.com/haxmas-logo.png" alt="Haxmas Logo">
+            <p>Enter password to access your gift list</p>
+            <form id="loginForm">
+                <input id="password" type="password" name="password" placeholder="Enter password..." required>
+                <br>
+                <input type="submit" value="🔓 Unlock">
+            </form>
+            <p id="loginError" class="error"></p>
+        </div>
+
+        <div id="mainApp" class="content hidden">
+            <h1>Gift Tracker</h1>
+            <img src="https://haxmas.hackclub.com/haxmas-logo.png" alt="Haxmas Logo">
+            <p>Tracking gifts since 2025</p>
+
+            <form id="giftForm">
+                <label for="name">Recipient: </label>
+                <input id="name" type="text" name="name" placeholder="Who's getting the gift?" required>
+                <br>
+                <label for="gift">Gift: </label>
+                <input id="gift" type="text" name="gift" placeholder="What are you giving?" required>
+                <br>
+                <label for="category">Category: </label>
+                <select id="category" name="category">
+                    <option value="Christmas">Christmas</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Valentine">Valentine</option>
+                    <option value="Other" Other</option>
+                </select>
+                <br>
+                <input type="submit" value="➕ Add Gift">
+            </form>
+
+            <div class="stats">
+                <span id="totalGifts">0 gifts</span> |
+                <span id="purchasedGifts">0 purchased</span> |
+                <span id="deliveredGifts">0 delivered</span>
+            </div>
+
+            <div id="gifts"></div>
+
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </body>
+</html>
